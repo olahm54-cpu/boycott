@@ -1,0 +1,69 @@
+/* Boycott Cards Grid */
+.boycott-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #f9f9f9; /* soft background */
+  border-radius: 12px;
+}
+
+/* Individual Card */
+.boycott-card {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-top: 6px solid #e63946; /* red stripe */
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+/* Palestine flag accent stripe */
+.boycott-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(to right, #000 25%, #fff 25% 50%, #e63946 50% 75%, #007A3D 75%);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* Hover glow */
+.boycott-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  border-color: #007A3D; /* green border glow */
+}
+
+.brand-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.boycott-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.boycott-card .reason {
+  color: #e63946; /* red */
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.boycott-card .alt {
+  color: #007A3D; /* green */
+  font-weight: 600;
+}
