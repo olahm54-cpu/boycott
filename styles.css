@@ -77,7 +77,7 @@ nav {
              
   background-image:  url('/statics/img.jpg') ; 
    background-repeat: no-repeat;
-        background-position: center center;
+   background-position: center center;
   color: #fff;
   text-align: center;
   padding: 6rem 2rem;
@@ -251,4 +251,54 @@ footer::before {
 .boycott-card .alt {
   color: #007A3D; /* Palestine green */
   font-weight: 500;
+}
+/* Research Grid */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.research-card {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-top: 6px solid #007A3D; /* Palestine green */
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.research-card h3 {
+  margin-bottom: 0.8rem;
+  color: #e63946; /* red */
+}
+
+.research-card p {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.source-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #007A3D; /* green */
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.source-btn:hover {
+  background: #005a2a;
 }
